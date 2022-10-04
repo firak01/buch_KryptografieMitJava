@@ -1,0 +1,20 @@
+voss@maria:~/Kryptologie/Hill > java -classpath ./:JNL.jar Hill_Encode
+Lese Datei ... 
+---- Datei: Test20.txt (35 Bytes) ----
+Blocklänge: 5
+Matrix A aus Datei einlesen? (J/N): j
+1       0       0       0       1
+0       1       1       0       0
+1       0       1       1       0
+1       1       0       1       1
+0       1       0       0       1
+det(A)=1.0  ggT(det(A),256)=1
+Vektor b aus Datei einlesen? (J/N): j
+0       1       3       2       1
+Chiffrierte Datei ausgeben? (J/N): j
+...C...å...f.,..xï.t.Üý_Ù@.....È..Ô
+159      172     247     67      167     149     154     229     31      142    
+156      102     181     44      153     167     120     239     10      116    
+146      220     253     95      217     64      198     247     25      133    
+186      200     22      134     212
+Fertig!

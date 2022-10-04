@@ -1,0 +1,7 @@
+voss@shania:~/Krypto2/JAVA> java division
+Divisionen in Java int a=17,b=3;
+================================
+(a) int c;      c=a/b=17/3       = 5
+(b) float d;    d=a/b=17/3       = 5.0
+(c) float d;    d=(float)a/b=17/3= 5.6666665
+(d) int c;      c=a%b=17/3       = 2

@@ -1,0 +1,7 @@
+voss@shania:~/Krypto2/JAVA> java quadrieren 7 20 6
+Zerlegung einer Potenz in einfache Multiplikation
+zur Berechnung von 7^20 mod 6 = 1
+
+voss@shania:~/Krypto2/JAVA> java quadrieren 7 20 57
+Zerlegung einer Potenz in einfache Multiplikation
+zur Berechnung von 7^20 mod 57 = 49

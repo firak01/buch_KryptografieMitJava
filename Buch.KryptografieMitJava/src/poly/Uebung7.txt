@@ -1,0 +1,19 @@
+83 99 104 108 117 101 115 115 101 108 119 111 114 116   
+Schluesselwort: Schluesselwort
+Bei dieser.VerschluesselUngsmethode wiRd das originaLe Alphabet eiNfach horizont
+Schluesselwort veraendern? (J/N): 
+Jetzt komplett entschluesseln? (J/N): j
+
+
+Bei dieser.VerschluesselUngsmethode wiRd das originaLe Alphabet eiNfach horizont
+Al verschoben..Bei einem SchLuessel von s=. wird z.B. deR Buchstabe "A. um drei 
+BuchStaben nach reChts verschobeN, wird also zU einem "D".([Footnote] LaesSt man
+ eine zyKlische VertauSchung zu, so Kann auch nach.links verschoBen werden.)  $a
+s gleiche paSsiert mit den.anderen BuchsTaben im AlphaBet, denn mindEstens fuer 
+eiNen Text als GAnzes muss dieSer Schluessel.gleich sein. !m Ende des AlPhabets 
+faengt.es dann wiedeR von vorne an. Aus einem Z Wird dann ein # usw. Da diesEs V
+erfahren hEute wegen seiNer sehr leichTen DekodierbaRkeit keine AnWendung mehr f
+Indet, ist es Auch maessig uEber eine AnweNdung inenrhalB des ASCII zu.diskutier
+en. $as Verfahren Hat also nur nOch historischEn Wert und eiGnet sich hoecHstens
+ als EinStieg in das THema KryptologIe.
+---- Dateilaenge: 839 Bytes ----

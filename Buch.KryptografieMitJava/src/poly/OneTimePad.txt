@@ -1,0 +1,20 @@
+Ein triviales und doch sehr sicheres Verfahren erhält man, wenn die
+Periodenlänge größer als die Textlänge ist. Das Entschlüsseln einer
+ -Chiffrierung war letztlich nur erfolgreich, weil aufgrund der kurzen
+Periode des Schlüsselwortes Eigenheiten einer Sprache hinsichtlich
+ihrer Buchtstabenhäufigkeit erhalten blieben. Diese Eigenschaften
+gehen völlig verloren, wenn es faktisch keine Periode mehr gibt, weil
+der Schlüssel mindestens gleich der Textlänge ist. Weiterhin werden
+alle Schlüssel nur einmal bzw. zufällig gewählt (One-Time-pad), wobei
+die Frage, was ist zufällig im Zusammenhang mit dem Computer hier
+nicht weiter behandelt werden soll. Da sowohl die Kasiski- als auch
+die Friedmann-Methode versagen, bleibt nichts weiter als der Brute-Force-Angriff,
+der hier aber im Prinzip grundsätzlich versagt, denn aufgrund der
+großen Schlüsselwortlänge wird jeder Angriff erfolglos bleiben. 
+
+Die einzigen beiden Nachteile beim One-Time-Pad-Verfahren ist die Frage,
+wie bekommt man einen zufälligen Schlüssel und wie hält man diesem
+Geheim, insbesondere bei der Übertragung des Geheimtextes. Denn ohne
+diesen Schlüssel ist dieser wertlos. Und will man z.B. 1000 Seiten
+verschlüsseln, so muss man noch einmal mindestens 1000 Seiten für
+den Schlüssel vorsehen!

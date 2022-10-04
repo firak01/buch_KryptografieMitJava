@@ -1,0 +1,16 @@
+voss@maria:~/ecKarte > java PIN_Demo
+
+DES-Schluessel als BigInteger (dezimal): 72340172838076673
+(binär) : 00000001 00000001 00000001 00000001 00000001 00000001 00000001 00000001 
+
+[ ... Zwischenergebnisse ... ]
+
+Als Bitkette:
+10110011 11001000 01011000 11010011 00001011 01011001 01100101 00010001 
+Als Hexkette:
+b3c858d30b596511
+3-6. Stelle für PIN
+c858
+PIN in korrigierter dezimalisierter Form
+2858
+voss@maria:~/ecKarte > 

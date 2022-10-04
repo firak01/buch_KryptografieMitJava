@@ -1,0 +1,18 @@
+voss@maria:~/Kryptologie/MARS > java MARSDemo
+Klartext in hexadezimaler Form:
+00000000000000000000000000000000
+(16 Bytes)
+Lese SBoxen: SBoxen.dat ... erledigt!
+Schlüssel: 80000000000000000000000000000000
+1 128-Bit-Blöcke = 16 Bytes
+Starte Verschlüsselung ...
+
+Verschlüsselte Datei in hexadezimaler Form:
+B3E2AD5608AC1B6733A7CB4FDF8F9952
+Starte Entschlüsselung ...
+(16 Bytes)
+1 128-Bit-Blöcke = 16 Bytes
+
+Entschlüsselte Datei in hexadezimaler Form:
+00000000000000000000000000000000
+voss@maria:~/Kryptologie/MARS > 

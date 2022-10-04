@@ -1,0 +1,4 @@
+voss@maria:~/DES > java Feistel 10010000 1423 3412 2341
+Feistel-Netzwerk mit 3 Runden
+Klartext: 10010000
+Chiffre : 01100101

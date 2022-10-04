@@ -1,0 +1,38 @@
+voss@maria:~/java MARS ../Test.dat
+Lese Klartext ...
+Lese Datei: ../Test.dat ... benötigte Zeit: 134.308 sek
+(4931784 Bytes)
+Lese SBoxen: SBoxen.dat ... erledigt!
+Schlüssellänge (128,192,256): 128
+Schlüssel: 614D43450F33642B07600C6E6F351936
+308237 128-Bit-Blöcke = 4931792 Bytes
+Starte Verschlüsselung ...
+Verschlüsselung beendet. 
+Benötigte Zeit: 37.814 sek
+In Datei speichern ...
+
+Verschlüsselte Datei ausgeben? (J/N):j
+
+B8DD2994A75BE38CCA554F322AEBB3DFAEF12115E4BFF4E63A9C4F271306
+CDF66A4015FC9A66A677C18C430FF157960437F50EB63BBB6877D261C925
+05BFBDBF28008167A9E0A397B6143E73787070D104D17787A4A4F2703001
+[...]
+
+voss@maria:~/> java MARS 614D43450F33642B07600C6E6F351936 Test.encrypt 
+Starte Entschlüsselung ...
+Lese Datei: Test.encrypt ... benötigte Zeit: 117.375 sek
+(4931792 Bytes)
+Lese SBoxen: SBoxen.dat ... erledigt!
+308237 128-Bit-Blöcke = 4931792 Bytes
+Entschlüsselung beendet. 
+Benötigte Zeit: 13.071 sek
+In Datei speichern ...
+
+Entschlüsselte Datei ausgeben? (J/N):j
+%!PS-Adobe-2.0
+%%Creator: dvips(k) 5.86 Copyright 1999 Radical Eye Software
+%%Title: Manuscript.dvi
+%%Pages: 228
+%%PageOrder: Ascend
+%%BoundingBox: 0 0 596 842
+[...]

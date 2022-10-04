@@ -1,0 +1,32 @@
+voss@maria:~/Kryptologie/Hill > java -classpath ./:JNL.jar Hill_Decode
+Lese Datei ... 
+---- Datei: Test20.kodiert (35 Bytes) ----
+Blocklänge: 5
+Matrix A aus Datei einlesen? (J/N): j
+1       0       0       0       1
+0       1       1       0       0
+1       0       1       1       0
+1       1       0       1       1
+0       1       0       0       1
+Bestimme inverse Matrix ... 
+Inverse Matrix:
+1       1       -1      1       -2
+0       1       -1      1       -1
+0       0       1       -1      1
+-1      -1      1       0       1
+0       -1      1       -1      2
+Bestimme a zur Restklasse 256 ... 
+1       1       255     1       254
+0       1       255     1       255
+0       0       1       255     1
+255     255     1       0       1
+0       255     1       255     2
+Vektor b aus Datei einlesen? (J/N): j
+0       1       3       2       1
+Dechiffrierte Datei ausgeben? (J/N): j
+KRYPTOGRAFIE IST WAS fuer das Leben
+75       82      89      80      84      79      71      82      65      70    
+73       69      32      73      83      84      32      87      65      83    
+32       102     117     101     114     32      100     97      115     32    
+76       101     98      101     110
+Fertig!

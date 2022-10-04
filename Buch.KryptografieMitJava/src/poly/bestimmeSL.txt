@@ -1,0 +1,25 @@
+voss@maria:~/Kryptologie/Vigenere > java Vigenere_Decode2
+---- Verschlüsselte Datei: kryptologie.Herbert (178054 Bytes) ----
+j=0     SL=-1   Kappa=1.0
+j=4     SL=4    Kappa=0.0610432790052456
+j=7     SL=3    Kappa=0.14158626034798433
+j=10    SL=3    Kappa=0.05389937884012715
+j=14    SL=4    Kappa=0.14523122198883484
+j=21    SL=7    Kappa=0.13318993114448427
+j=24    SL=3    Kappa=0.05082727711817763
+j=28    SL=4    Kappa=0.13118492142833074
+j=35    SL=7    Kappa=0.12057016410751795
+j=42    SL=7    Kappa=0.11382501937614431
+Weitermachen (J/N)? >j
+j=49    SL=7    Kappa=0.1125388926954744
+j=56    SL=7    Kappa=0.10186235636379974
+j=63    SL=7    Kappa=0.0929380974311164
+j=70    SL=7    Kappa=0.08945600772799263
+j=77    SL=7    Kappa=0.08577173217113909
+j=84    SL=7    Kappa=0.07204555921237378
+j=91    SL=7    Kappa=0.07339908117762027
+j=98    SL=7    Kappa=0.06630572747593427
+j=105   SL=7    Kappa=0.06738405202915969
+j=112   SL=7    Kappa=0.06468262437238141
+Weitermachen (J/N)? >n
+voss@maria:~/Kryptologie/Vigenere > 

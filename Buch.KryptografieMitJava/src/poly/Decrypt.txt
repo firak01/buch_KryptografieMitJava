@@ -1,0 +1,28 @@
+voss@maria:~/Kryptologie/Vigenere > java Vig_Decode SchluesselWort Text.kodiert2
+
+---- Chiffretext von: Text.kodiert2 ----
+.HQ.YNXfJ^wEWfFFPXjJffJXL]Yg@H\TdIX.\UIS.X4V.[gNZ\SMCT.5?SPMWJg.JUEUSW;.P[gNmbS`
+8[.j8U[O]TUXS.w1W]sHQZZR.FHTCdWgFHT.kTa.X)..i]EG.f#'!.IQI.4i6K[`VGX..-y.gasGZQ^.
+5hHTJcSV8Q.ZVH[.WQ:WfgsYM^hH[bGQE..k<UL.VQfb.fL.W]AHU..).!.G=^ahAR\QR.?TJ_Jc.a4Q
+.Q^SX._eB[[g6KM.KJegFaJRZiAJ.fj..fT.BP`bsD]O].aTHTw[[b>V.bZWfVM[9T`.JHZPZS!....P
+e.:OMUXMX.UMJb[YEW.Y^Y.WJZwP`X8UMZ.'hVM_KPTYA.QY.&_cMM9Tf sGMZc.`\SP<bfYAV.RjJe.
+JUET`.'H``.F_f.38]lYF.UahX.WNQJTd.&FPXjJffJXwV^Y<FP.hJ\a...\.9AGM.YJf.&XGWSV8W[.
+[FXaL`wTe.7DVZ.\\XIQI.hcA.^[gSX.FZ..3iF.MUcJ`.?.NXdXsGIZc.X\S...ggJ..0V.W\J_<b.J
+8UNM]WXa.T<dfYsZMSZS.fJUETd.FHP^.QX\HTKT`..HS[YNXeGMIZW]G.SQ^SX.&ZNT`XHQO.bJ[e.R
+@]VYG..UhY.XX.8dU\sPIQhX\Z.a<QWfsHQZZ.4a\QESgb:.QZZSe[FX9.VYF.)?8.<._awS[g>X\UZW
+Xa...Pe.)HZRVMeXS.?Pf.4O[[.She.ZFRZ.;L[`dW\fHT<].K8U\.jSW.JU>]WhsVQO].[bJO?bfYAV
+.MaX.8NZJc[Y:.QZ.ITf.@?T_Us.ZeeYb_TS@T 
+
+-- Originaltext von: Text.kodiert2 --
+Bei dieser Verschluesselungsmethode wird das originale Alphabet einfach horizont
+al verschoben. Bei einem Schluessel von s=3 wird z.B. der Buchstabe "A" um drei 
+Buchstaben nach rechts verschoben, wird also zu einem "D".([footnote] Laesst man
+ eine zyklische Vertauschung zu, so kann auch nach links verschoben werden.)  Da
+s gleiche passiert mit den anderen Buchstaben im Alphabet, denn mindestens fuer 
+einen Text als Ganzes muss dieser Schluessel gleich sein. Am Ende des Alphabets 
+faengt es dann wieder von vorne an. Aus einem Z wird dann ein C usw. Da dieses V
+erfahren heute wegen seiner sehr leichten Dekodierbarkeit keine Anwendung mehr f
+indet, ist es auch maessig ueber eine Anwendung inenrhalb des ASCII zu diskutier
+en. Das Verfahren hat also nur noch historischen Wert und eignet sich hoechstens
+ als Einstieg in das Thema Kryptologie.
+---- Dateilaenge: 839 Bytes ----

@@ -1,0 +1,6 @@
+Starte Entschluesselung ...
+Bestimme wahrscheinlichste Anordnung ...
+0 0 0 0 
+89 69 84 73   Schluesselwort: YETI
+\end{center}\newpage\pagenumbering{Roman}  Herbert Voﬂ, Berlin, M‰rz 2000voss@pe
+Schluesselwort veraendern? (J/N):  

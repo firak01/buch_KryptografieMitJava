@@ -1,0 +1,2 @@
+IO.class, Hex.class und Datei.class enthalten die benötigten Methoden für
+Ein-/Ausgabe-, Hexadezimalzahl-  und Dateioperationen.

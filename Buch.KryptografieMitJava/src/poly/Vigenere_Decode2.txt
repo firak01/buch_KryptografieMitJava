@@ -1,0 +1,49 @@
+voss@maria:~/Kryptologie/Vigenere > java Vigenere_Decode2 kryptologie.YETI2
+Lese Datei ... 
+---- Verschluesselte Datei: kryptologie.YETI2 (178054 Bytes) ----
+j=0     SL=-1   Kappa=1.0
+j=4     SL=4    Kappa=0.1842306266638211
+j=8     SL=4    Kappa=0.17140867377312502
+[ ...   SL=4    ... ]
+j=36    SL=4    Kappa=0.12149684927044604
+Weitermachen (J/N)? >
+Schluesselwortlaenge= 4
+....
+----- Die Statistik ----
+0:
+0:
+(121): 13.86%   (190): 8.32%    (134): 8.13%    (199): 4.79%    (194): 4.49% 
+(205): 4.05%    (203): 3.76%    (204): 3.23%    (186): 2.8%     (197): 2.69% 
+1:
+(101): 15.53%   (170): 8.56%    (114): 7.96%    (179): 4.84%    (174): 4.34% 
+(183): 3.86%    (185): 3.84%    (184): 3.26%    (177): 2.72%    (166): 2.7% 
+2:
+(116): 14.48%   (129): 8.9%     (185): 8.23%    (194): 4.57%    (189): 4.48% 
+(198): 4.01%    (200): 3.65%    (199): 3.36%    (181): 2.91%    (192): 2.78% 
+3:
+(105): 15.48%   (118): 8.65%    (174): 8.35%    (183): 4.72%    (178): 4.51% 
+(189): 3.67%    (187): 3.6%     (188): 3.34%    (181): 2.83%    (170): 2.8% 
+
+Starte Entschluesselung ...
+Bestimme wahrscheinlichste Anordnung ...
+1 1 1 1 
+89 69 28 17   Schluesselwort: YE..
+\e..{c..te..\n..pa..\p..en..be..ng..om..} X.er..rtX.o.dXBe..indXM... 2hh0v..s@..
+Schluesselwort veraendern? (J/N): j
+Aktuelle Anordnung: 1 1 1 1 
+Neue Anordnung:     1 1 2 1
+89 69 84 17   Schluesselwort: YET.
+\en.{ce.ter.\ne.pag.\pa.enu.ber.ng{.oma.}  .erb.rt .o.,XBer.in,XM.r. 20h0vo.s@p.
+Schluesselwort veraendern? (J/N): j
+Aktuelle Anordnung: 1 1 2 1 
+Neue Anordnung:     1 1 2 2
+89 69 84 73   Schluesselwort: YETI
+\end{center}\newpage\pagenumbering{Roman}  Herbert Voﬂ, Berlin, M‰rz 2000voss@pe
+Schluesselwort veraendern? (J/N): 
+Jetzt komplett entschluesseln? (J/N): j
+
+\end{center}\newpage\pagenumbering{Roman}  Herbert Voﬂ, Berlin, M‰rz 2000voss@pe
+rce.de\tableofcontents{}\newpage \pagenumbering{arabic}1 Allgemein1.1 Lernziele 
+Lernziele werden hier nur formal angegeben, eine Operationalisierungerfolgt nich
+
+[... Rest des Textes ... ]

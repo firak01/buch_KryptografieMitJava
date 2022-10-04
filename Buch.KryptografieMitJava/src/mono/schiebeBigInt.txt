@@ -1,0 +1,18 @@
+PC2-Matrix aus C UND D
+0 1 1 0 1 1 
+1 1 1 0 1 1 
+1 0 1 0 0 0 
+0 1 0 0 0 1 
+1 0 1 0 0 1 
+1 1 1 0 0 0 
+0 0 1 0 1 0 
+0 1 0 0 1 0 
+ und als Bitkette:
+011011111011101000010001101001111000001010010010
+
+PC2-Matrix aus C UND D viermal links geschoben (mit Rotation)
+111110111010000100011010011110000010100100100110
+
+Jetzt wieder viermal rechts geschoben (mit Rotation)
+011011111011101000010001101001111000001010010010
+voss@maria:~/Kryptologie > 

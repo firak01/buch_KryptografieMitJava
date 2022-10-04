@@ -1,0 +1,147 @@
+voss@maria:~/texte/Aufsatz/Kryptologie/Caesar > java CipherDecode ueb0.txt 
+Lx law bxpwnkwgiwky gl Ylgljxc V,
+Gy mxe icxo law Cgfjy agzw jczgpwp Uxtgcp gcp gkw 
+lakwglwcjcq gtt xh Wekxuw. Mxek bxeclkm gcp law oxktp cwwp 
+mxek awtu! J agzw baxywc mxe nwbgeyw mxe agzw law hjcwyl 
+sjcpy lx yxtzw law oxktp'y sxyl pjhhjbetl uefftw -- WCJQSG.
+Mxe seyl oxki dejbitm gcp jc ywbkwl awkw gl Ylgljxc V ecljt 
+mxe nkwgi law bjuawk. 
+Rxttm qxxp tebi!
+Yjk Ojcylxc Baekbajtt
+
+Ermittele die Häufigkeitsverteilung:
+A: 16   B: 11   C: 21   D:  1   E: 17   F:  3   G: 21   H:  4   I:  6   J: 18   
+K: 17   L: 24   M: 10   N:  3   O:  5   P: 13   Q:  3   R:  1   S:  4   T: 16   
+U:  5   V:  2   W: 34   X: 27   Y: 16   Z:  5   
+
+Sortierte Ausgabe:
+W: 34   X: 27   L: 24   C: 21   G: 21   J: 18   E: 17   K: 17   A: 16   T: 16   
+Y: 16   P: 13   B: 11   M: 10   I:  6   O:  5   U:  5   Z:  5   H:  4   S:  4   
+F:  3   N:  3   Q:  3   V:  2   D:  1   R:  1   
+Als Zeichenkette: WXLCGJEKATYPBMIOUZHSFNQVDR
+Welche Sprache: (D)eutsch, (E)nglish, (F)rancais? e
+Entsprechende Häufigkeitsverteilung: ETAOINSRHLDCUMFPGWYBVKXJQZ
+
+Starte Entschluesselung
+
+AT AHE UTCEKREIFERD IA DAIANTO J,
+ID MTS FOTP AHE OIVND HIWE NOWICEC GTLIOC IOC 
+IRE 
+AHREIAEONOX ILL TY ESRTGE. MTSR UTSOARM IOC AHE PTRLC OEEC 
+MTSR HELG! N HI
+WE UHTDEO MTS KEUISDE MTS HIWE AHE YNOEDA 
+BNOCD AT DTLWE AHE PTRLC'D BTDA CNYYN
+USLA GSVVLE -- EONXBI.
+MTS BSDA PTRF QSNUFLM IOC NO DEUREA HERE IA DAIANTO J SOA
+NL 
+MTS KREIF AHE UNGHER. 
+ZTLLM XTTC LSUF!
+DNR PNODATO UHSRUHNLL
+
+Neuer Versuch (J/N): j
+Gib neue Häufigkeitsverteilung ein!
+(gleiche Buchstaben müssen nicht wiederholt werden)
+ETAOINSRHLDCUMFPGWYBVKXJQZ
+ at
+EATOINSRHLDCUMFPGWYBVKXJQZ
+
+Starte Entschluesselung
+
+TA THE UACEKREIFERD IT DTITNAO J,
+ID MAS FOAP THE OIVND HIWE NOWICEC GALIOC IOC 
+IRE 
+THREITEONOX ILL AY ESRAGE. MASR UASOTRM IOC THE PARLC OEEC 
+MASR HELG! N HI
+WE UHADEO MAS KEUISDE MAS HIWE THE YNOEDT 
+BNOCD TA DALWE THE PARLC'D BADT CNYYN
+USLT GSVVLE -- EONXBI.
+MAS BSDT PARF QSNUFLM IOC NO DEURET HERE IT DTITNAO J SOT
+NL 
+MAS KREIF THE UNGHER. 
+ZALLM XAAC LSUF!
+DNR PNODTAO UHSRUHNLL
+
+Neuer Versuch (J/N): j
+Gib neue Häufigkeitsverteilung ein!
+(gleiche Buchstaben müssen nicht wiederholt werden)
+EATOINSRHLDCUMFPGWYBVKXJQZ
+ o a
+EOTAINSRHLDCUMFPGWYBVKXJQZ
+
+Starte Entschluesselung
+
+
+[ ... ]
+
+
+TO THE CODEBREAKERS AT STATION X,
+AS YOU KNOW THE NAVIS HAJE INJADED POLAND AND 
+ARE 
+THREATENING ALL OF EUROPE. YOUR COUNTRY AND THE WORLD NEED 
+YOUR HELP! I HA
+JE CHOSEN YOU BECAUSE YOU HAJE THE FINEST 
+MINDS TO SOLJE THE WORLD'S MOST DIFFI
+CULT PUVVLE -- ENIGMA.
+YOU MUST WORK QUICKLY AND IN SECRET HERE AT STATION X UNT
+IL 
+YOU BREAK THE CIPHER. 
+ZOLLY GOOD LUCK!
+SIR WINSTON CHURCHILL
+
+Neuer Versuch (J/N): j
+Gib neue Häufigkeitsverteilung ein!
+(gleiche Buchstaben müssen nicht wiederholt werden)
+EOTNAIURHLSDCYKWPJFMVBGXQZ
+                    z    v
+EOTNAIURHLSDCYKWPJFMZBGXQV
+
+Starte Entschluesselung
+
+TO THE CODEBREAKERS AT STATION X,
+AS YOU KNOW THE NAZIS HAJE INJADED POLAND AND 
+ARE 
+THREATENING ALL OF EUROPE. YOUR COUNTRY AND THE WORLD NEED 
+YOUR HELP! I HA
+JE CHOSEN YOU BECAUSE YOU HAJE THE FINEST 
+MINDS TO SOLJE THE WORLD'S MOST DIFFI
+CULT PUZZLE -- ENIGMA.
+YOU MUST WORK QUICKLY AND IN SECRET HERE AT STATION X UNT
+IL 
+YOU BREAK THE CIPHER. 
+VOLLY GOOD LUCK!
+SIR WINSTON CHURCHILL
+
+Neuer Versuch (J/N): j
+Gib neue Häufigkeitsverteilung ein!
+(gleiche Buchstaben müssen nicht wiederholt werden)
+EOTNAIURHLSDCYKWPJFMZBGXQV
+                 v       j
+EOTNAIURHLSDCYKWPVFMZBGXQJ
+
+Starte Entschluesselung
+
+TO THE CODEBREAKERS AT STATION X,
+AS YOU KNOW THE NAZIS HAVE INVADED POLAND AND 
+ARE 
+THREATENING ALL OF EUROPE. YOUR COUNTRY AND THE WORLD NEED 
+YOUR HELP! I HA
+VE CHOSEN YOU BECAUSE YOU HAVE THE FINEST 
+MINDS TO SOLVE THE WORLD'S MOST DIFFI
+CULT PUZZLE -- ENIGMA.
+YOU MUST WORK QUICKLY AND IN SECRET HERE AT STATION X UNT
+IL 
+YOU BREAK THE CIPHER. 
+JOLLY GOOD LUCK!
+SIR WINSTON CHURCHILL
+
+Neuer Versuch (J/N): n
+Fertig!
+
+Die Entschlüsselungstabelle
+Chiffre : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Klartext: HCNQUZAFKIRTYBWDGJMLPXEOSV
+
+bzw. die zugehörige Verschlüsselungstabelle
+Klartext: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Chiffre : GNBPWHQAJRITSCXUDKYLEZOVMF
+voss@maria:~/texte/Aufsatz/Kryptologie/Caesar > 

@@ -1,0 +1,6 @@
+voss@maria:~/Kryptologie > java dBestimmen 7 480
+x:1 e:7 d:68 dRest:5
+x:2 e:7 d:137 dRest:2
+x:3 e:7 d:205 dRest:6
+x:4 e:7 d:274 dRest:3
+x:5 e:7 d:343 dRest:0

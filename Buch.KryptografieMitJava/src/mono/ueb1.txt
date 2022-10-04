@@ -1,0 +1,21 @@
+voss@maria:~/texte/Aufsatz/Kryptologie/Caesar > java CipherDecode ueb0.txt 
+Lx law bxpwnkwgiwky gl Ylgljxc V,
+Gy mxe icxo law Cgfjy agzw jczgpwp Uxtgcp gcp gkw 
+lakwglwcjcq gtt xh Wekxuw. Mxek bxeclkm gcp law oxktp cwwp 
+mxek awtu! J agzw baxywc mxe nwbgeyw mxe agzw law hjcwyl 
+sjcpy lx yxtzw law oxktp'y sxyl pjhhjbetl uefftw -- WCJQSG.
+Mxe seyl oxki dejbitm gcp jc ywbkwl awkw gl Ylgljxc V ecljt 
+mxe nkwgi law bjuawk. 
+Rxttm qxxp tebi!
+Yjk Ojcylxc Baekbajtt
+
+Ermittele die Häufigkeitsverteilung:
+A: 16   B: 11   C: 21   D:  1   E: 17   F:  3   G: 21   H:  4   I:  6   J: 18   
+K: 17   L: 24   M: 10   N:  3   O:  5   P: 13   Q:  3   R:  1   S:  4   T: 16   
+U:  5   V:  2   W: 34   X: 27   Y: 16   Z:  5   
+
+Sortierte Ausgabe:
+W: 34   X: 27   L: 24   C: 21   G: 21   J: 18   E: 17   K: 17   A: 16   T: 16   
+Y: 16   P: 13   B: 11   M: 10   I:  6   O:  5   U:  5   Z:  5   H:  4   S:  4   
+F:  3   N:  3   Q:  3   V:  2   D:  1   R:  1   
+Als Zeichenkette: WXLCGJEKATYPBMIOUZHSFNQVDR 

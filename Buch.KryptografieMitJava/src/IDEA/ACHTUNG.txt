@@ -1,0 +1,5 @@
+Dateiendungen der Art kryptologie.YETI sind ein Hinweis darauf,
+dass diese Mit dem Schluesselwort YETI verschlüsselt wurde.
+
+IO.class, Hex.class und Datei.class enthalten die benötigten Methoden für
+Ein-/Ausgabe-, Hexadezimalzahlen- und  Dateioperationen.

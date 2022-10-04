@@ -1,0 +1,43 @@
+voss@maria:~/Kryptologie > java RSAEncode 1033 99999640000243 Text.original
+Originaltext:
+Bei dieser Verschluesselungsmethode wird das originale Alphabet einfach horizontal 
+verschoben. Bei einem Schluessel von s=3 wird z.B. der Buchstabe "A" um drei Buchs
+taben nach rechts verschoben, wird also zu einem "D".([footnote] Laesst man eine z
+yklische Vertauschung zu, so kann auch nach links verschoben werden.)  Das gleiche
+ passiert mit den anderen Buchstaben im Alphabet, denn mindestens fuer einen Text 
+als Ganzes muss dieser Schluessel gleich sein. Am Ende des Alphabets faengt es dan
+n wieder von vorne an. Aus einem Z wird dann ein C usw. Da dieses Verfahren heute 
+wegen seiner sehr leichten Dekodierbarkeit keine Anwendung mehr findet, ist es auc
+h maessig ueber eine Anwendung inenrhalb des ASCII zu diskutieren. Das Verfahren h
+at also nur noch historischen Wert und eignet sich hoechstens als Einstieg in das 
+Thema Kryptologie.
+
+Bei : --> 066101105032    --> kodiert: 91587891977482
+dies: --> 100105101115    --> kodiert: 83515733762125
+er V: --> 101114032086    --> kodiert: 29852047364374
+ersc: --> 101114115099    --> kodiert: 73030388718285
+hlue: --> 104108117101    --> kodiert: 30479177641225
+ssel: --> 115115101108    --> kodiert: 08910636978975
+ungs: --> 117110103115    --> kodiert: 80724025184732
+meth: --> 109101116104    --> kodiert: 56494924044662
+ode : --> 111100101032    --> kodiert: 56063409656300
+wird: --> 119105114100    --> kodiert: 90047004661928
+ das: --> 032100097115    --> kodiert: 12786491680113
+ ori: --> 032111114105    --> kodiert: 27142834029099
+gina: --> 103105110097    --> kodiert: 72516419422506
+le A: --> 108101032065    --> kodiert: 42512908280606
+lpha: --> 108112104097    --> kodiert: 34182782984501
+bet : --> 098101116032    --> kodiert: 94790424003707
+einf: --> 101105110102    --> kodiert: 13309577147976
+ach : --> 097099104032    --> kodiert: 03405692214559
+hori: --> 104111114105    --> kodiert: 06036739570536
+zont: --> 122111110116    --> kodiert: 98856923186689
+al v: --> 097108032118    --> kodiert: 78052449210008
+ersc: --> 101114115099    --> kodiert: 73030388718285
+hobe: --> 104111098101    --> kodiert: 11875064519392
+n. B: --> 110046032066    --> kodiert: 93640225247432
+ei e: --> 101105032101    --> kodiert: 51071822094970
+inem: --> 105110101109    --> kodiert: 81736009977848
+ Sch: --> 032083099104    --> kodiert: 00259201620481
+lues: --> 108117101115    --> kodiert: 30813690754591
+sel : --> 115101108032    --> kodiert: 76966603929360

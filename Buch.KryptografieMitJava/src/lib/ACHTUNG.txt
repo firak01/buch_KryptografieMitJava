@@ -1,0 +1,16 @@
+IO.java		Ein-/Ausgabeoperationen
+IO.class
+Hex.java	Hexadezimaloperationen
+Hex.class
+Datei.java	Dateioperationen
+Datei.class 
+ArrayUtil.java	Matrizenoperationen
+ArrayUtil.class
+
+
+Cryptix 1.16	 Ältere Java-Bibliothek von www.cryptix.org
+aes.tar.gz       Ältere Java-Bibliothek von   "    "    "
+cryptix-jce-...  aktuelle Java-Bibliothek von "    "    "
+
+siehe CryptixLicense.txt
+
