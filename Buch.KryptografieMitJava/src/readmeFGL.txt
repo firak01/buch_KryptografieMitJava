@@ -3,3 +3,6 @@
           Daher stimmen die Packagenamen wohl nicht mehr.
           Das Projekt soll nur eine Codesammlung sein.
           Zum Ausprobieren entsprechende Klassen mit Main Methode im Kernel-Projekt unter einem tryout - Ordner erstellen.
+          
+          Das ZKernelProjekt dazu importieren.
+          
