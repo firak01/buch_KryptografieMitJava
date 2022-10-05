@@ -1,0 +1,14 @@
+wichtig Text ohne Sonderzeichen
+
+Bei dieser Verschluesselungsmethode wird das originale Alphabet einfach
+horizontal verschoben Bei einem Schluessel von s 3  wird zB der Buchstabe
+A um drei Buchstaben nach rechts verschoben wird also zu einem
+D Laesst man eine zyklische Vertauschung zu so kann auch
+nach links verschoben werden Das gleiche passiert mit den anderen
+Buchstaben im Alphabet denn mindestens fuer einen Text als Ganzes
+muss dieser Schluessel gleich sein Am Ende des Alphabets faengt es
+dann wieder von vorne an Aus einem Z wird dann ein C usw Da dieses
+Verfahren heute wegen seiner sehr leichten Dekodierbarkeit keine Anwendung
+mehr findet ist es auch muessig ueber eine Anwendung innerhalb des
+ASCII zu diskutieren Das Verfahren hat also nur noch historischen
+Wert und eignet sich hoechstens als Einstieg in das Thema Kryptologie
