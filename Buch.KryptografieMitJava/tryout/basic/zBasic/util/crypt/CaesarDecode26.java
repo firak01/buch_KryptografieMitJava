@@ -84,7 +84,7 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
     }
   }
   public static void main( String[] arg) {
-    if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted.txt");	 
+    if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\Rot13ZZZCrypted.txt");	 
     else                 d = new DateiUtil(arg[0]);
     new CaesarDecode26();
   }

@@ -17,11 +17,15 @@ public class Caesar {
 		int schluessel = 3; // Vorgabe
 		
 		if(args.length > 0) { schluessel = Integer.parseInt(args[0]); }
+		
+		String sFilepath;
 		if(args.length > 1) { 
-			original = new DateiUtil(args[1]);
+			sFilepath = args[1];
 		}else {
-			original = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\Beispieltext_ohne_sonderzeichen_klein_ein_wort.txt");
+			sFilepath = "tryout\\basic\\zBasic\\util\\crypt\\Beispieltext_ohne_sonderzeichen_klein_ein_wort2.txt";
 		}
+		original = new DateiUtil(sFilepath);
+		
 		byte[] geheim = original.lies();
 		System.out.println("---- Verschluesseln von: "+DateiUtil.dateiname+"----");
 		for(int i = 0 ; i < geheim.length; i++) {
