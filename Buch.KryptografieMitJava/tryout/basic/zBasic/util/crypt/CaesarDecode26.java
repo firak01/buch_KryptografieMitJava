@@ -19,21 +19,33 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
   int i,j,k,sl, bezug;
   String zKette;
   
-  public CaesarDecode26 () {	 	 
+  public static void main( String[] arg) {
+	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROT13ZZZCrypted1.txt");	 
+	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted1_schluessellaenge3.txt");
+	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted2_schluessellaenge3.txt");
+	  	//if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted3_schluessellaenge4.txt");
+	  	//if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTnnCrypted_schluessellaenge5.txt");
+	  	if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTasciiCrypted_schluessellaenge3.txt");
+	    else                 d = new DateiUtil(arg[0]);
+	    new CaesarDecode26();
+  }
+  
+  public CaesarDecode26 () {
+	  int iOffset = 97;
     byte[] mtext = d.lies() ;
     for (int i = 0; i < mtext.length; i++ ) {
       byte b = mtext[i];
       System.out.print(b);
-      if(b-97>=26 || b-97 < 0) {
+      if(b-iOffset>=26 || b-iOffset < 0) {
     	  //FGL: Das Zeichen ist dann nicht zu zählen
       }else {
-    	  h[b-97]++;
+    	  h[b-iOffset]++;
       }
       System.out.print((char)mtext[i]);
     }
     System.out.println();
     for (i=0; i < 26; i++) {
-      System.out.print((char)(i+97)+":"+IoUtil.intToString(h[i],3)+"   ");
+      System.out.print((char)(i+iOffset)+":"+IoUtil.intToString(h[i],3)+"   ");
       if (((i+1)%10)==0) System.out.println();
     }
     System.out.print("\n\nErmittele die haeufigsten 10 Buchstaben:");
@@ -48,11 +60,11 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
       h[k]=0;
     }    
     System.out.print("\nEingabe des Bezugsbuchstaben fuer Schluessellaenge: ");
-    bezug=(byte)IoUtil.Zeichen()-97;
-    System.out.println("\nSchluessellaenge in bezug auf '"+(char)(bezug+97)+
+    bezug=(byte)IoUtil.Zeichen()-iOffset;
+    System.out.println("\nSchluessellaenge in bezug auf '"+(char)(bezug+iOffset)+
                        "'(Zeichen-Ordinalzahl-Haeufigkeit)");
     for (i=0; i < 10; i++) {
-      System.out.print((char)(cspitze[i]+97)+"("
+      System.out.print((char)(cspitze[i]+iOffset)+"("
                        +cspitze[i]+")"+": "+spitze[i]+" ");
       sl = cspitze[i]-bezug;
       spitze[i]=sl;
@@ -82,10 +94,5 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
       zKette=IoUtil.Satz();
       if (zKette.equals("n")||zKette.equals("N")) System.exit(0);
     }
-  }
-  public static void main( String[] arg) {
-    if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\Rot13ZZZCrypted.txt");	 
-    else                 d = new DateiUtil(arg[0]);
-    new CaesarDecode26();
   }
 }

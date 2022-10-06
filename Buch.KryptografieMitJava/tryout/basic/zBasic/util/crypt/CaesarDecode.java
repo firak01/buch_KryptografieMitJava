@@ -10,6 +10,10 @@ import base.io.IoUtil;
  * Ist wohl eine Weiterentwicklung von CaesarDecode26.java
  * und geht über den ganzen ASCII Zeichensatz
  * 
+ * Merke: 
+ * Dieser Ansatz ist dazu geeignet fehlerfrei ROTasciiZZZ Verschlüsselungen zu knacken.
+ * Aber ROTnnZZ Verschlüsselungen sind nicht sauber zu knacken, da der Zeichenpool frei definiert werden kann. 
+ * 
  * @author Fritz Lindhauer, 04.10.2022, 14:45:19
  * 
  */
@@ -20,6 +24,17 @@ class CaesarDecode {                      // zaehlt die Buchstaben
   static DateiUtil d;
   int i,j,k,sl, bezug;
   String zKette;
+  
+  public static void main( String[] arg) {
+	     //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROT13ZZZCrypted1.txt");//das soll dann wohl die Schlüssellaenge13 sein!!!	 
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted1_schluesselaenge3.txt");
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted2_schluessellaenge3.txt");
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted3_schluessellaenge4.txt");		 
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTasciiZZZCrypted1_schluessellaenge3.txt");
+	  	if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTnnZZZCrypted1_schluessellaenge5.txt"); //Merke: Den nn Codierten String zu knacken ist schwerer, da man den CharacterPool so nicht kennt.
+	    else                 d = new DateiUtil(arg[0]);
+	    new CaesarDecode();
+	  }
   
   public CaesarDecode () {	 	 
     byte[] mtext = d.lies() ;
@@ -46,9 +61,11 @@ class CaesarDecode {                      // zaehlt die Buchstaben
     for (i=0; i<10; i++) {
       System.out.print(".");
       k=0;
-      for (j=1; j<256; j++) 
-        if (h[j] > h[k])  
-          k=j;
+      for (j=1; j<256; j++) {
+    	  if (h[j] > h[k]) {
+    		  k=j;
+    	  }
+      }
       spitze[i]=h[k];
       cspitze[i]=k;
       h[k]=0;
@@ -66,8 +83,14 @@ class CaesarDecode {                      // zaehlt die Buchstaben
     }
     for (k=0; k<10; k++) {
       System.out.print("\nStarte Entschluesselung mit sl="+spitze[k]+":");
+      
+      String sTotal = "";
       for (i=0; i<mtext.length; i++) {
-      if ((i%80) == 0) System.out.println();
+
+      if ((i%80) == 0) {
+    	  System.out.println("\n"+sTotal+"\n");
+    	  sTotal="";
+      }
       //FGL 20221005: Mache mal Fehlerbehebung..
       
         //char c = (char)(mtext[i]-spitze[k]-97);
@@ -80,20 +103,16 @@ class CaesarDecode {                      // zaehlt die Buchstaben
       	//int erg = mtext[i]-spitze[k]-97;    //FGL: hier 97 (s. ASCII Tabelle) abzuziehen ist falsch!!!  	      
     	int erg = mtext[i]-spitze[k];
       	//System.out.print(erg); System.out.println("|");           
-        IoUtil.printChar(erg);
+        IoUtil.printCharWithPosition(erg,"\t");
       	
-      	
+        char c = (char)erg;
+        sTotal = sTotal+c;        
       }
+      System.out.println("\n"+sTotal+"\n");
+      
       System.out.print("\n\nNeuer Versuch (J/N): ");
       zKette=IoUtil.Satz();
       if (zKette.equals("n")||zKette.equals("N")) System.exit(0);
     }
-  }
-  public static void main( String[] arg) {
-     if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\Rot13ZZZCrypted.txt");	 
-	 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted.txt");
-	 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted2.txt");
-    else                 d = new DateiUtil(arg[0]);
-    new CaesarDecode();
   }
 }

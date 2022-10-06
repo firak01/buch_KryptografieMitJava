@@ -14,7 +14,7 @@ public class Caesar {
 	public static void main(String[] args) {
 		DateiUtil original;
 		int zeichen;
-		int schluessel = 3; // Vorgabe
+		int schluessel = 4;//3; // Vorgabe der Schlüssellänge
 		
 		if(args.length > 0) { schluessel = Integer.parseInt(args[0]); }
 		
