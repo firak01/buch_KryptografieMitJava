@@ -1,4 +1,4 @@
-package basic.zBasic.util.crypt;
+package basic.zBasic.util.crypt.encode;
 
 import base.files.DateiUtil;
 
@@ -14,16 +14,19 @@ public class Caesar {
 	public static void main(String[] args) {
 		DateiUtil original;
 		int zeichen;
-		int schluessel = 4;//3; // Vorgabe der Schlüssellänge
-		
-		if(args.length > 0) { schluessel = Integer.parseInt(args[0]); }
-		
+		int schluessel = 3; // Vorgabe der Schlüssellänge, 3 ist historisch von Caesar verwendet worden.
+			
 		String sFilepath;
-		if(args.length > 1) { 
-			sFilepath = args[1];
+		if(args.length > 0) { 
+			sFilepath = args[0];
 		}else {
-			sFilepath = "tryout\\basic\\zBasic\\util\\crypt\\Beispieltext_ohne_sonderzeichen_klein_ein_wort2.txt";
+			//sFilepath = "tryout\\basic\\zBasic\\util\\crypt\\encode\\file\\Beispieltext_ohne_sonderzeichen_klein_ein_wort1.txt";
+			sFilepath = "tryout\\basic\\zBasic\\util\\crypt\\encode\\file\\Beispieltext_ohne_sonderzeichen_klein_ein_wort2.txt";
 		}
+		
+		if(args.length > 1) { schluessel = Integer.parseInt(args[1]); }
+		
+		
 		original = new DateiUtil(sFilepath);
 		
 		byte[] geheim = original.lies();

@@ -1,4 +1,4 @@
-package basic.zBasic.util.crypt;
+package basic.zBasic.util.crypt.decode;
 
 import base.files.DateiUtil;
 import base.io.IoUtil;
@@ -26,12 +26,12 @@ class CaesarDecode {                      // zaehlt die Buchstaben
   String zKette;
   
   public static void main( String[] arg) {
-	     //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROT13ZZZCrypted1.txt");//das soll dann wohl die Schlüssellaenge13 sein!!!	 
-		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted1_schluesselaenge3.txt");
-		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted2_schluessellaenge3.txt");
-		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted3_schluessellaenge4.txt");		 
-		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTasciiZZZCrypted1_schluessellaenge3.txt");
-	  	if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTnnZZZCrypted1_schluessellaenge5.txt"); //Merke: Den nn Codierten String zu knacken ist schwerer, da man den CharacterPool so nicht kennt.
+	     //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\ROT13ZZZCrypted1.txt");//das soll dann wohl die Schlüssellaenge13 sein!!!	 
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\CaesarCrypted1_schluesselaenge3.txt");
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\CaesarCrypted2_schluessellaenge3.txt");
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\CaesarCrypted3_schluessellaenge4.txt");		 
+		 //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\ROTasciiZZZCrypted1_schluessellaenge3.txt");
+	  	if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\ROTnnZZZCrypted1_schluessellaenge5.txt"); //Merke: Den nn Codierten String zu knacken ist schwerer, da man den CharacterPool so nicht kennt.
 	    else                 d = new DateiUtil(arg[0]);
 	    new CaesarDecode();
 	  }

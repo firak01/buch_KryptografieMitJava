@@ -1,0 +1,11 @@
+Bei dieser Verschluesselungsmethode wird das originale Alphabet einfach horizont
+al verschoben. Bei einem Schluessel von s=3 wird z.B. der Buchstabe "A" um drei 
+Buchstaben nach rechts verschoben, wird also zu einem "D".([footnote] Laesst man
+ eine zyklische Vertauschung zu, so kann auch nach links verschoben werden.)  Da
+s gleiche passiert mit den anderen Buchstaben im Alphabet, denn mindestens fuer 
+einen Text als Ganzes muss dieser Schluessel gleich sein. Am Ende des Alphabets 
+faengt es dann wieder von vorne an. Aus einem Z wird dann ein C usw. Da dieses V
+erfahren heute wegen seiner sehr leichten Dekodierbarkeit keine Anwendung mehr f
+indet, ist es auch maessig ueber eine Anwendung inenrhalb des ASCII zu diskutier
+en. Das Verfahren hat also nur noch historischen Wert und eignet sich hoechstens
+ als Einstieg in das Thema Kryptologie.

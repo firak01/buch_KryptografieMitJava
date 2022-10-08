@@ -1,4 +1,4 @@
-package basic.zBasic.util.crypt;
+package basic.zBasic.util.crypt.decode;
 
 import base.files.DateiUtil;
 import base.io.IoUtil;
@@ -20,12 +20,12 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
   String zKette;
   
   public static void main( String[] arg) {
-	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROT13ZZZCrypted1.txt");	 
-	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted1_schluessellaenge3.txt");
-	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted2_schluessellaenge3.txt");
-	  	//if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\CaesarCrypted3_schluessellaenge4.txt");
-	  	//if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTnnCrypted_schluessellaenge5.txt");
-	  	if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\ROTasciiCrypted_schluessellaenge3.txt");
+	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\ROT13ZZZCrypted1.txt");	 
+	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\CaesarCrypted1_schluessellaenge3.txt");
+	    //if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\CaesarCrypted2_schluessellaenge3.txt");
+	  	//if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\CaesarCrypted3_schluessellaenge4.txt");
+	  	//if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\ROTnnCrypted_schluessellaenge5.txt");
+	  	if (arg.length== 0)  d = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\decode\\file\\ROTasciiCrypted_schluessellaenge3.txt");
 	    else                 d = new DateiUtil(arg[0]);
 	    new CaesarDecode26();
   }
