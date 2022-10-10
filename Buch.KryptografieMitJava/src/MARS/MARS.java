@@ -5,9 +5,9 @@ public final class MARS {
     MaxCharProZeile = 30;
   private static final int[] S = new int[128*4];	// Die S-Boxen
   private boolean decrypt;				// Instanzvariablen
-  private byte[] key;					// Grundschlüssel
+  private byte[] key;					// Grundschlï¿½ssel
   private int KeyLength;
-  private final int[] K = new int[40];			// Teilschlüssel
+  private final int[] K = new int[40];			// Teilschlï¿½ssel
 //-------------------------------------------------------------------------
 
   public MARS(String DatName) {				// Constructor encrypt	
@@ -21,28 +21,28 @@ public final class MARS {
     }
     else P = new Datei();
     ms = -System.currentTimeMillis();
-    p = P.lies(); 	
+    p = P.liesAsByte(); 	
     ms += System.currentTimeMillis();
-    System.out.println(" benötigte Zeit: "+(float)ms/1000.0+" sek");
+    System.out.println(" benï¿½tigte Zeit: "+(float)ms/1000.0+" sek");
     System.out.println("("+p.length+" Bytes)");
     decrypt = false;
-    Init();						// Schlüssel generieren
+    Init();						// Schlï¿½ssel generieren
     ms = -System.currentTimeMillis();
-    System.out.println("Schlüssel: "+Hex.toString(key));
-    int nBlock = (p.length+BlockSize-1)/BlockSize; 	// 128 Bit-Blöcke
+    System.out.println("Schlï¿½ssel: "+Hex.toString(key));
+    int nBlock = (p.length+BlockSize-1)/BlockSize; 	// 128 Bit-Blï¿½cke
     byte[] tmp = new byte[nBlock*BlockSize];
     byte[] out = new byte[nBlock*BlockSize];
-    System.out.println(nBlock+" 128-Bit-Blöcke = "+(nBlock*BlockSize)+" Bytes");
+    System.out.println(nBlock+" 128-Bit-Blï¿½cke = "+(nBlock*BlockSize)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
-    System.out.println("Starte Verschlüsselung ...");
+    System.out.println("Starte Verschlï¿½sselung ...");
     for (int i=0; i<nBlock; i++) 
       coreCrypt(tmp,i*BlockSize,out,i*BlockSize);
     ms += System.currentTimeMillis();;
-    System.out.println("Verschlüsselung beendet. \nBenötigte Zeit: "+
+    System.out.println("Verschlï¿½sselung beendet. \nBenï¿½tigte Zeit: "+
                        (float)ms/1000.0+" sek\nIn Datei speichern ...\u0007");
     P = new Datei();
     P.schreib(out);
-    System.out.print("\nVerschlüsselte Datei ausgeben? (J/N):");
+    System.out.print("\nVerschlï¿½sselte Datei ausgeben? (J/N):");
     if (IO.JaNein()) 
       for (int i=0; i<out.length; i++) {
         if ((i%MaxCharProZeile)==0) System.out.println();
@@ -53,7 +53,7 @@ public final class MARS {
   }
 //-------------------------------------------------------------------------
   public MARS(byte[] skey, String DatName) {		// Constructor decrypt
-    System.out.println("Starte Entschlüsselung ...");
+    System.out.println("Starte Entschlï¿½sselung ...");
     key = skey;
     Datei P;
     byte[] p;
@@ -61,27 +61,27 @@ public final class MARS {
     P = new Datei(DatName);
     System.out.print("Lese Datei: "+P.dateiname+" ...");
     ms = -System.currentTimeMillis();
-    p = P.lies();
+    p = P.liesAsByte();
     ms += System.currentTimeMillis();
-    System.out.println(" benötigte Zeit: "+(float)ms/1000.0+" sek");
+    System.out.println(" benï¿½tigte Zeit: "+(float)ms/1000.0+" sek");
     System.out.println("("+p.length+" Bytes)");
     decrypt=true;
     ms = -System.currentTimeMillis();
-    Init();						// Teilschlüssel 
-    int nBlock = (p.length+BlockSize-1)/BlockSize;	// 28 Bit-Blöcke
+    Init();						// Teilschlï¿½ssel 
+    int nBlock = (p.length+BlockSize-1)/BlockSize;	// 28 Bit-Blï¿½cke
     byte[] tmp = new byte[nBlock*BlockSize];
     byte[] out = new byte[nBlock*BlockSize];
-    System.out.println(nBlock+" 128-Bit-Blöcke = "+
+    System.out.println(nBlock+" 128-Bit-Blï¿½cke = "+
                        (nBlock*BlockSize)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
     for (int i=0; i<nBlock; i++)
       coreCrypt(tmp,i*BlockSize,out,i*BlockSize);
     ms += System.currentTimeMillis();
-    System.out.println("Entschlüsselung beendet. \nBenötigte Zeit: "+
+    System.out.println("Entschlï¿½sselung beendet. \nBenï¿½tigte Zeit: "+
                        (float)ms/1000.0+" sek\nIn Datei speichern ...\u0007");
     P = new Datei();
     P.schreib(out);
-    System.out.print("\nEntschlüsselte Datei ausgeben? (J/N):");
+    System.out.print("\nEntschlï¿½sselte Datei ausgeben? (J/N):");
     if (IO.JaNein()) 
       for (int i=0; i<out.length; i++)
         System.out.print((char)out[i]); 
@@ -91,7 +91,7 @@ public final class MARS {
 //-------------------------------------------------------------------------
   protected void Init() {
     liesSBoxen();
-    if (!decrypt) { System.out.print("Schlüssellänge (128,192,256): ");
+    if (!decrypt) { System.out.print("Schlï¿½ssellï¿½nge (128,192,256): ");
       switch (Integer.parseInt(IO.Satz())) {
         case 256: key=new byte[32]; break;
         case 192: key=new byte[24]; break;
@@ -135,7 +135,7 @@ public final class MARS {
       for(ii=0; ii<4; ii++)					// 4 Runden "Mixer ..."
         for(i=0; i<15; i++)
           T[i]=rotIntLinks(T[i]+S[T[(i+14)%15]&0x1FF],9);
-        for(i=0; i<10; i++)					// Teilschlüssel speichern
+        for(i=0; i<10; i++)					// Teilschlï¿½ssel speichern
           K[10*j+i]=T[(4*i)%15];
     }
     int m, p, r, w;
@@ -171,9 +171,9 @@ public final class MARS {
              (in[inOffset++] & 0xFF) <<  8 |
              (in[inOffset++] & 0xFF) << 16 |
              (in[inOffset++] & 0xFF) << 24;
-    if (decrypt) {					// Entschlüsseln?
+    if (decrypt) {					// Entschlï¿½sseln?
       for (i=0; i<4; i++)				// Ja
-        X[i] += K[36+i];				// 1. Ebene: Schlüsseladdition
+        X[i] += K[36+i];				// 1. Ebene: Schlï¿½sseladdition
       for (i = 7; i >= 0; i--) {
         t = X[3]; X[3] = X[2]; X[2] = X[1]; X[1] = X[0]; X[0] = t;
         X[3] ^= S[ X[0] & 0xFF     ]; X[0] = rotIntRechts(X[0],8);
@@ -212,10 +212,10 @@ public final class MARS {
       for (i=0; i<4; i++)
         X[i] -= K[i];
     }
-    else {						// Verschlüsseln
+    else {						// Verschlï¿½sseln
       for (i=0; i<4; i++)
-        X[i] += K[i];					// 1. Ebene: Schlüsseladdition
-      for (i = 0; i < 8; i++) {				// 2. Ebene: Vorwärtsmischen
+        X[i] += K[i];					// 1. Ebene: Schlï¿½sseladdition
+      for (i = 0; i < 8; i++) {				// 2. Ebene: Vorwï¿½rtsmischen
         X[1] ^= S[ X[0] & 0xFF];        X[0] = rotIntRechts(X[0],8);
         X[1] += S[(X[0] & 0xFF)+256]; X[0] = rotIntRechts(X[0],8);
         X[2] += S[ X[0] & 0xFF];        X[0] = rotIntRechts(X[0],8);
@@ -239,7 +239,7 @@ public final class MARS {
         }
         t=X[0]; X[0]=X[1]; X[1]=X[2]; X[2]=X[3]; X[3]=t;
       }
-      for (i = 0; i < 8; i++) {				// 5. Ebene: Rückwärtsmischen
+      for (i = 0; i < 8; i++) {				// 5. Ebene: Rï¿½ckwï¿½rtsmischen
         if ((i==2)||(i==6)) X[0] -= X[3];
         else
           if ((i==3)||(i==7)) X[0] -= X[1];
@@ -250,7 +250,7 @@ public final class MARS {
         t = X[0]; X[0] = X[1]; X[1] = X[2]; X[2] = X[3]; X[3] = t;
       }
       for (i=0; i<4; i++)
-        X[i] -= K[36+i];				// 6. Ebene: Schlüsselsubtraktion
+        X[i] -= K[36+i];				// 6. Ebene: Schlï¿½sselsubtraktion
     }
     for (i=0; i<16; i++)				// die Chiffre-der Text
       out[outOffset++] = (byte)(X[i/4] >>> (i%4)*8);

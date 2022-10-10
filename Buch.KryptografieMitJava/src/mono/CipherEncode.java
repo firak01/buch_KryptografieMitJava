@@ -4,7 +4,7 @@ class CipherEncode {                      // zaehlt die Buchstaben
   private String Deutsch = "enirsatdhulgocmbfwkzpvjyxq".toUpperCase();
   private String English = "etaoinsrhldcumfpgwybvkxjqz".toUpperCase();
   private String Francais = "etainroshdlcfumgpwbyvkqxjz".toUpperCase();
-  private int[] nHaufen = new int[26];		// Häufigkeit
+  private int[] nHaufen = new int[26];		// Hï¿½ufigkeit
   private char[] cHaufen = new char[26];	// welche Zeichen
   static Datei d;
   int i,j,k,sl, bezug;
@@ -14,7 +14,7 @@ class CipherEncode {                      // zaehlt die Buchstaben
     char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
     char[] dummy = new char[26];
     char zeichen;
-    byte[] mtext = d.lies() ;
+    byte[] mtext = d.liesAsByte() ;
     for (int i = 0; i < mtext.length; i++ ) {
       h[mtext[i]]++;
       System.out.print((char)mtext[i]);
@@ -35,7 +35,7 @@ class CipherEncode {                      // zaehlt die Buchstaben
 
     for (i=0; i<26; i++)		// klein+GROSS zusammenfassen
       H[i] = h[i+65]+h[i+97];
-    System.out.print("\n\nErmittele die Häufigkeitsverteilung:");
+    System.out.print("\n\nErmittele die Hï¿½ufigkeitsverteilung:");
     System.out.println();
     for (i=0; i<26; i++) {
       System.out.print((char)(i+65)+":"+IO.intToString(H[i],3)+"   ");
@@ -62,7 +62,7 @@ class CipherEncode {                      // zaehlt die Buchstaben
     System.out.print("Welche Sprache: (D)eutsch, (E)nglish, (F)rancais? ");
     char Sprache = IO.ZeichenUpCase();
     String SpracheStr="";
-    System.out.print("Entsprechende Häufigkeitsverteilung: ");
+    System.out.print("Entsprechende Hï¿½ufigkeitsverteilung: ");
     switch (Sprache) {
       case 'D' : System.out.println(Deutsch); SpracheStr=Deutsch; break;
       case 'E' : System.out.println(English); SpracheStr=English; break;
@@ -84,7 +84,7 @@ class CipherEncode {                      // zaehlt die Buchstaben
       }
       System.out.print("\n\nNeuer Versuch (J/N): ");
       if (!IO.JaNein()) {
-        System.out.print("Fertig!\n\nDie Entschlüsselungstabelle\nChiffre : ");
+        System.out.print("Fertig!\n\nDie Entschlï¿½sselungstabelle\nChiffre : ");
         System.out.println(alpha);
         System.out.print("Klartext: ");
         for (int i=0; i<26; i++) {
@@ -92,7 +92,7 @@ class CipherEncode {                      // zaehlt die Buchstaben
           System.out.print(dummy[i]); 
         }
         DataStr = new String(dummy);
-        System.out.print("\n\nbzw. die zugehörige Verschlüsselungstabelle\nKlartext: ");
+        System.out.print("\n\nbzw. die zugehï¿½rige Verschlï¿½sselungstabelle\nKlartext: ");
         System.out.println(alpha);
         System.out.print("Chiffre : ");
         for (int i=65; i<91; i++) 
@@ -100,8 +100,8 @@ class CipherEncode {                      // zaehlt die Buchstaben
         System.out.println();
         System.exit(0);					// Abbruch
       }
-      System.out.println("Gib neue Häufigkeitsverteilung ein!");
-      System.out.println("(gleiche Buchstaben müssen nicht wiederholt werden)");
+      System.out.println("Gib neue Hï¿½ufigkeitsverteilung ein!");
+      System.out.println("(gleiche Buchstaben mï¿½ssen nicht wiederholt werden)");
       System.out.println(SprData);
       dummy=IO.Satz().toUpperCase().toCharArray();
       for (int i=0; i<dummy.length; i++)

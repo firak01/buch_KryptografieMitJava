@@ -11,7 +11,7 @@ public class SerpentDemo2 {
   final byte[][] LTtableInverse = new byte[128][8]; 
 
   public SerpentDemo2() { 			// Constructor encrypt	
-    Init(null);				// Schlüssel generieren
+    Init(null);				// Schlï¿½ssel generieren
 //    byte[] p=new byte[] {0,1,0,2,0,3,0,4,0,5,0,6,0,8,0,9};
     byte[] p=new byte[16];
 //    for (int i=0; i<16; i++) p[i]=(byte)(Math.random()*128);
@@ -20,11 +20,11 @@ public class SerpentDemo2 {
     for (int i=0; i<p.length; i++)
       System.out.print(Hex.byteToString(p[i]));
     System.out.println("("+p.length+" Bytes)");
-    System.out.println("Starte Verschlüsselung ...");
-    int AnzahlBloecke = 1; //(p.length+BlockGroesse-1)/BlockGroesse; // Anzahl 64 Bit-Blöcke
+    System.out.println("Starte Verschlï¿½sselung ...");
+    int AnzahlBloecke = 1; //(p.length+BlockGroesse-1)/BlockGroesse; // Anzahl 64 Bit-Blï¿½cke
     byte[] tmp = new byte[AnzahlBloecke*BlockGroesse];
     byte[] out = new byte[AnzahlBloecke*BlockGroesse];
-    System.out.println(AnzahlBloecke+" 128-Bit-Blöcke = "+
+    System.out.println(AnzahlBloecke+" 128-Bit-Blï¿½cke = "+
                       (AnzahlBloecke*BlockGroesse)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
     blockEncrypt(p,0,out,0);
@@ -32,7 +32,7 @@ public class SerpentDemo2 {
       System.out.print(Hex.byteToString(out[i]));
     System.out.println();
     p = out;
-    System.out.println("Starte Entschlüsselung ...");
+    System.out.println("Starte Entschlï¿½sselung ...");
     blockDecrypt(p,0,out,0);
     for (int i=0; i<out.length; i++)
       System.out.print(Hex.byteToString(out[i]));
@@ -57,7 +57,7 @@ public class SerpentDemo2 {
         iFP = dFP++;
     }
     System.out.println("fertig!");
-    System.out.print("Schlüssellänge (128,192,256): ");
+    System.out.print("Schlï¿½ssellï¿½nge (128,192,256): ");
     switch (Integer.parseInt(IO.Satz())) {
       case 256: key=new byte[32]; break;
       case 192: key=new byte[24]; break;
@@ -65,8 +65,8 @@ public class SerpentDemo2 {
     }
 //    key[0]=(byte)0x80;
 //    for (int i=0; i<16; i++) key[i]=(byte)(Math.random()*128);
-    System.out.println("Schlüssel:"+Hex.toString(key));
-    System.out.print("Bestimme Rundenschlüssel ... ");
+    System.out.println("Schlï¿½ssel:"+Hex.toString(key));
+    System.out.print("Bestimme Rundenschlï¿½ssel ... ");
     makeKey(key);
     System.out.println("fertig!");
   }
@@ -97,13 +97,13 @@ public class SerpentDemo2 {
   public void bestimmeLTtables() {
     System.out.print("Lese LTtables ... ");
     Datei P = new Datei("LTtable.dat");
-    byte[] p = P.lies();
+    byte[] p = P.liesAsByte();
     int z=0;
     for (int i=0; i<128; i++)
       for (int j=0; j<8;j++)
         LTtable[i][j] = p[z++];
     P = new Datei("LTtableInverse.dat");
-    p = P.lies();
+    p = P.liesAsByte();
     z=0;
     for (int i=0; i<128; i++)
       for (int j=0; j<8;j++)

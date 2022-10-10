@@ -32,7 +32,7 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
   
   public CaesarDecode26 () {
 	  int iOffset = 97;
-    byte[] mtext = d.lies() ;
+    byte[] mtext = d.liesAsByte() ;
     for (int i = 0; i < mtext.length; i++ ) {
       byte b = mtext[i];
       System.out.print(b);

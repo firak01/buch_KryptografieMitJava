@@ -5,7 +5,7 @@ class Skytale { // Entschluesselung einer Skytale
     int i, j, zeilen=2, MaxZeilen;
     if (arg.length > 0) { Original = new Datei(arg[1]); }
     else { Original = new Datei(); }
-    byte[] geheim = Original.lies();
+    byte[] geheim = Original.liesAsByte();
     MaxZeilen = geheim.length/2;
     System.out.println("\n-- Verschluesselter Text von: "+Datei.dateiname+" --");
     for (i=0; i < geheim.length; i++) {

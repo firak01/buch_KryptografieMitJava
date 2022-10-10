@@ -22,29 +22,29 @@ public final class Serpent2 {
     else		    P = new Datei();
     System.out.print("Lese Klartext: ");
     ms = -System.currentTimeMillis();
-    p = P.lies(); 	
+    p = P.liesAsByte(); 	
     ms += System.currentTimeMillis();
     System.out.println(P.dateiname+" ...");
-    System.out.println(" benötigte Zeit: "+(float)ms/1000.0+" sek");
+    System.out.println(" benï¿½tigte Zeit: "+(float)ms/1000.0+" sek");
     System.out.println(p.length+" Bytes)");
     decrypt = false;
-    System.out.println("Starte Verschlüsselung ...");
-    Init(null);						// Schlüssel generieren
-    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse; // Anzahl 128 Bit-Blöcke
+    System.out.println("Starte Verschlï¿½sselung ...");
+    Init(null);						// Schlï¿½ssel generieren
+    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse; // Anzahl 128 Bit-Blï¿½cke
     byte[] tmp = new byte[AnzahlBloecke*BlockGroesse];
     byte[] out = new byte[AnzahlBloecke*BlockGroesse];
-    System.out.println(AnzahlBloecke+" 128-Bit-Blöcke = "+
+    System.out.println(AnzahlBloecke+" 128-Bit-Blï¿½cke = "+
                  (AnzahlBloecke*BlockGroesse)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
     ms = -System.currentTimeMillis();
     for (int i=0; i<AnzahlBloecke; i++)
       blockEncrypt(tmp,i*BlockGroesse,out,i*BlockGroesse);
     ms += System.currentTimeMillis();;
-    System.out.println("Verschlüsselung beendet. \nBenötigte Zeit: "+
+    System.out.println("Verschlï¿½sselung beendet. \nBenï¿½tigte Zeit: "+
                  (float)ms/1000.0+" sek\nIn Datei speichern ...");
     P = new Datei();
     P.schreib(out);
-    System.out.print("\nVerschlüsselte Datei ausgeben? (J/N):");
+    System.out.print("\nVerschlï¿½sselte Datei ausgeben? (J/N):");
     if (IO.JaNein()) 
       for (int i=0; i<out.length; i++)
         System.out.print(Hex.byteToString(out[i]));
@@ -59,28 +59,28 @@ public final class Serpent2 {
     P = new Datei(DatName);
     System.out.print("Lese Datei: "+P.dateiname+" ...");
     ms = -System.currentTimeMillis();
-    p = P.lies(); 	
+    p = P.liesAsByte(); 	
     ms += System.currentTimeMillis();
     System.out.println("("+p.length+" Bytes)");
-    System.out.println(" benötigte Zeit: "+(float)ms/1000.0+" sek");
+    System.out.println(" benï¿½tigte Zeit: "+(float)ms/1000.0+" sek");
     decrypt=true;
-    System.out.println("Starte Entschlüsselung ...");
-    Init(key);						// Teilschlüssel 
-    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse;	// Anzahl 64 Bit-Blöcke
+    System.out.println("Starte Entschlï¿½sselung ...");
+    Init(key);						// Teilschlï¿½ssel 
+    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse;	// Anzahl 64 Bit-Blï¿½cke
     byte[] tmp = new byte[AnzahlBloecke*BlockGroesse];
     byte[] out = new byte[AnzahlBloecke*BlockGroesse];
-    System.out.println(AnzahlBloecke+" 128-Bit-Blöcke = "+
+    System.out.println(AnzahlBloecke+" 128-Bit-Blï¿½cke = "+
                       (AnzahlBloecke*BlockGroesse)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
     ms = -System.currentTimeMillis();
     for (int i=0; i<AnzahlBloecke; i++)
       blockDecrypt(tmp,i*BlockGroesse,out,i*BlockGroesse);
     ms += System.currentTimeMillis();
-    System.out.println("Entschlüsselung beendet. \nBenötigte Zeit: "+
+    System.out.println("Entschlï¿½sselung beendet. \nBenï¿½tigte Zeit: "+
                       (float)ms/1000.0+" sek\nIn Datei speichern ...");
     P = new Datei();
     P.schreib(out);
-    System.out.print("\nEntschlüsselte Datei ausgeben? (J/N):");
+    System.out.print("\nEntschlï¿½sselte Datei ausgeben? (J/N):");
     if (IO.JaNein()) 
       for (int i=0; i<out.length; i++)
         IO.printChar(out[i]);
@@ -105,7 +105,7 @@ public final class Serpent2 {
     }
     System.out.println("fertig!");
     if (!decrypt) {				// Key bestimmen?
-      System.out.print("Schlüssellänge (128,192,256): ");
+      System.out.print("Schlï¿½ssellï¿½nge (128,192,256): ");
       switch (Integer.parseInt(IO.Satz())) {
         case 256: key=new byte[32]; break;
         case 192: key=new byte[24]; break;
@@ -113,8 +113,8 @@ public final class Serpent2 {
       }
       for (int i=0; i<key.length; i++) key[i]=(byte)(Math.random()*128);
     }
-    System.out.println("Schlüssel:"+Hex.toString(key));
-    System.out.print("Bestimme Rundenschlüssel ... ");
+    System.out.println("Schlï¿½ssel:"+Hex.toString(key));
+    System.out.print("Bestimme Rundenschlï¿½ssel ... ");
     makeKey(key);
     System.out.println("fertig!");
   }
@@ -159,13 +159,13 @@ public final class Serpent2 {
   public void bestimmeLTtables() {
     System.out.print("Lese LTtables ... ");
     Datei P = new Datei("LTtable.dat");
-    byte[] p = P.lies();
+    byte[] p = P.liesAsByte();
     int z=0;
     for (int i=0; i<128; i++)
       for (int j=0; j<8;j++)
         LTtable[i][j] = p[z++];
     P = new Datei("LTtableInverse.dat");
-    p = P.lies();
+    p = P.liesAsByte();
     z=0;
     for (int i=0; i<128; i++)
       for (int j=0; j<8;j++)

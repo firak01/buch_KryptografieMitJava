@@ -19,7 +19,7 @@ public class RSAEncode {
       if (LaufVariable==oText.length) ende=true;
     }  
     while (szahl.length()<(ByteLaenge*3))
-      szahl="0"+szahl;     // mit Nullen auffüllen (reine Optik)
+      szahl="0"+szahl;     // mit Nullen auffï¿½llen (reine Optik)
     System.out.print(": --> "+szahl);    // zur Kontrolle ausgeben
     return new BigInteger(szahl);
   }
@@ -28,7 +28,7 @@ public class RSAEncode {
     BigInteger BigOriginal, BigChiffriert=BigInteger.ZERO;
     BigInteger eBig=new BigInteger(e);
     BigInteger nBig=new BigInteger(n);
-    oText = Text.lies() ;
+    oText = Text.liesAsByte() ;
     for (int i=0; i < oText.length; i++ ) // Original ausgeben
       System.out.print((char)oText[i]);     // reine Kontrolle!
     System.out.println("\n");

@@ -14,7 +14,7 @@ class Datei {
   }
 //------------  Methoden ------------------
   public String liesString() {
-    byte[] inhalt = this.lies();
+    byte[] inhalt = this.liesAsByte();
     return new String(inhalt);
   }
   public byte[] lies() {

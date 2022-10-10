@@ -20,7 +20,7 @@ public class RSADecode {
     int Lauf; char ASCII;
     BigInteger dBig=new BigInteger(d); BigInteger nBig=new BigInteger(n);    
     BigInteger BigOriginal, BigChiffriert;
-    cText = Chiffre.lies() ;
+    cText = Chiffre.liesAsByte() ;
     for (int i = 0; i < cText.length; i++ ) // Chiffre ausgeben
       System.out.print((char)cText[i]);
     System.out.println("\n");

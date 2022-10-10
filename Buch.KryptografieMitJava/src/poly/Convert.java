@@ -4,7 +4,7 @@ class Convert  {    	// beseitigt CRLF und Space
   public static void main( String[] arg) {
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
-    byte[] mtext = d.lies();
+    byte[] mtext = d.liesAsByte();
     int j = 0;
     for (int i=0; i<mtext.length; i++) 
       if ((mtext[i]!=13)&&(mtext[i]!=10)&&(mtext[i]!=32)) {

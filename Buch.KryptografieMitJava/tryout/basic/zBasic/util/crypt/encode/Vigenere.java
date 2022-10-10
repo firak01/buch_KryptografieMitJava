@@ -14,17 +14,18 @@ import base.io.IoUtil;
 class Vigenere { 		// Vigenereverschluesselung
 
   public static void main( String[] arg) {
-    //String SchluesselWort="HALLO"; //FGL: passend zum Beispiel im Buch
-	String SchluesselWort="SchluesselWort"; //FGL: passend zur Datei Vigenere.txt im poly - Verzeichnis der Begleit CD
+    String SchluesselWort="HALLO"; //FGL: passend zum Beispiel im Buch
+	//String SchluesselWort="SchluesselWort"; //FGL: passend zur Datei Vigenere.txt im poly - Verzeichnis der Begleit CD
 	                                        //     ABER: DAS ERGEBNIS WEICHT AB!!!
     DateiUtil Original;
     int c, i, laengeSW;   
    
-    int[] s = IoUtil.Unicode(SchluesselWort.getBytes());
+    int[] s = IoUtil.Unicode(SchluesselWort.getBytes()); //fGL: Die Schlüsselwortbuchstaben
     if (arg.length > 0) {
     	Original = new DateiUtil(arg[0]);
-    } else { 
-    	Original = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\encode\\file\\Langer_Beispieltext2_zur_Vigenere_Verschluesselung.txt");
+    } else {
+    	Original = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\encode\\file\\Beispieltext2_ohne_Sonderzeichen.txt");
+    	//Original = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\encode\\file\\Langer_Beispieltext2_zur_Vigenere_Verschluesselung.txt");
     	//Original = new DateiUtil("tryout\\basic\\zBasic\\util\\crypt\\encode\\file\\Langer_Beispieltext1_ohne_Sonderzeichen.txt");
     }
     
@@ -35,7 +36,7 @@ class Vigenere { 		// Vigenereverschluesselung
     }
     laengeSW = SchluesselWort.length();
     
-    int[] p = Original.liesUnicode();
+    int[] p = Original.liesUnicode();//FGL: Der Klartextbuchstabe
     System.out.print("Originaltext ausgeben? (J/N): ");
     if (IoUtil.JaNein()) {
       System.out.println("---- Originaltext von: "+DateiUtil.dateiname+" ----");
@@ -46,10 +47,16 @@ class Vigenere { 		// Vigenereverschluesselung
     }
     System.out.println("\n-- Verschluessele Text von: "+DateiUtil.dateiname+" --");
     for (i = 0; i < p.length; i++) {
+    	if(i>=1) System.out.print("|");
       //Das steht in der Codedatei
-      c = (s[i%laengeSW]+p[i])%256; //FGL: 	Das ist der Mathematische Ansatz: 
+    	//Merke: c = Chiffrebuchstabe
+    	int iIndexS = i%laengeSW;
+    	int iSum = s[iIndexS]+p[i];
+    	int iFormula = (iSum)%256;
+      c = iFormula; //FGL: 	Das ist der Mathematische Ansatz: 
       								//		Die Buchstaben wurden durch natuerliche Zahlen ersetzt.
                                     //		Dann fiel eine Gesetzmaessigkeit auf (s. Seite 32 im Buch), die so ausgenutzt wurde.
+      System.out.print("i="+c);
       p[i] = c;				// nur wegen abspeichern
       
     }	
@@ -57,7 +64,7 @@ class Vigenere { 		// Vigenereverschluesselung
     if (IoUtil.JaNein()) {
       System.out.println("\n\n-- Verschluesselter Text von: "+DateiUtil.dateiname+" --");
       for (i = 0; i < p.length; i++) {
-        IoUtil.printChar(p[i]);
+    	IoUtil.printCharWithPosition((p[i]),"|");
         if (((i+1)%80)==0) System.out.println();	// neue Zeile
       }
     }

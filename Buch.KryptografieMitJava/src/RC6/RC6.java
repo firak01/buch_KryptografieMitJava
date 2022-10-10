@@ -23,29 +23,29 @@ public final class RC6 {
     else		    P = new Datei();
     System.out.print("Lese Klartext: "+P.dateiname+" ...");
     ms = -System.currentTimeMillis();
-    p = P.lies(); 	
+    p = P.liesAsByte(); 	
     ms += System.currentTimeMillis();
-    System.out.println(" benötigte Zeit: "+(float)ms/1000.0+" sek");
+    System.out.println(" benï¿½tigte Zeit: "+(float)ms/1000.0+" sek");
     System.out.println(p.length+" Bytes)");
     decrypt = false;
-    System.out.println("Starte Verschlüsselung ...\u0007");
+    System.out.println("Starte Verschlï¿½sselung ...\u0007");
     ms = -System.currentTimeMillis();
-    Init();						// Schlüssel generieren
-    System.out.println("Schlüssel: "+Hex.toString(key));
-    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse; // Anzahl 64 Bit-Blöcke
+    Init();						// Schlï¿½ssel generieren
+    System.out.println("Schlï¿½ssel: "+Hex.toString(key));
+    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse; // Anzahl 64 Bit-Blï¿½cke
     byte[] tmp = new byte[AnzahlBloecke*BlockGroesse];
     byte[] out = new byte[AnzahlBloecke*BlockGroesse];
-    System.out.println(AnzahlBloecke+" 128-Bit-Blöcke = "+
+    System.out.println(AnzahlBloecke+" 128-Bit-Blï¿½cke = "+
                        (AnzahlBloecke*BlockGroesse)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
     for (int i=0; i<AnzahlBloecke; i++) 
       coreCrypt(tmp,i*BlockGroesse,out,i*BlockGroesse);
     ms += System.currentTimeMillis();;
-    System.out.println("Verschlüsselung beendet. \nBenötigte Zeit: "+
+    System.out.println("Verschlï¿½sselung beendet. \nBenï¿½tigte Zeit: "+
                        (float)ms/1000.0+" sek\nIn Datei speichern ...\u0007");
     P = new Datei();
     P.schreib(out);
-    System.out.print("\nVerschlüsselte Datei ausgeben? (J/N):");
+    System.out.print("\nVerschlï¿½sselte Datei ausgeben? (J/N):");
     if (IO.JaNein()) 
       for (int i=0; i<out.length; i++)
         System.out.print(Hex.byteToString(out[i]));
@@ -55,35 +55,35 @@ public final class RC6 {
 //-------------------------------------------------------------------------
   public RC6(byte[] skey, String DatName) {		// Constructor decrypt
     key = skey;
-    System.out.println("Schlüssel: "+Hex.toString(key,0,16));
+    System.out.println("Schlï¿½ssel: "+Hex.toString(key,0,16));
     long ms;						// Millisekunden
     Datei P;
     byte[] p;
     P = new Datei(DatName);
     System.out.print("Lese Datei: "+P.dateiname+" ...");
     ms = -System.currentTimeMillis();
-    p = P.lies(); 	
+    p = P.liesAsByte(); 	
     ms += System.currentTimeMillis();
     System.out.println("("+p.length+" Bytes)");
-    System.out.println(" benötigte Zeit: "+(float)ms/1000.0+" sek");
+    System.out.println(" benï¿½tigte Zeit: "+(float)ms/1000.0+" sek");
     decrypt=true;
-    System.out.println("Starte Entschlüsselung ...\u0007");
+    System.out.println("Starte Entschlï¿½sselung ...\u0007");
     ms = -System.currentTimeMillis();
-    Init();						// Teilschlüssel 
-    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse;	// Anzahl 64 Bit-Blöcke
+    Init();						// Teilschlï¿½ssel 
+    int AnzahlBloecke = (p.length+BlockGroesse-1)/BlockGroesse;	// Anzahl 64 Bit-Blï¿½cke
     byte[] tmp = new byte[AnzahlBloecke*BlockGroesse];
     byte[] out = new byte[AnzahlBloecke*BlockGroesse];
-    System.out.println(AnzahlBloecke+" 128-Bit-Blöcke = "+
+    System.out.println(AnzahlBloecke+" 128-Bit-Blï¿½cke = "+
                        (AnzahlBloecke*BlockGroesse)+" Bytes");
     System.arraycopy(p,0,tmp,0,p.length);		// p nach tmp kopieren
     for (int i=0; i<AnzahlBloecke; i++)
       coreCrypt(tmp,i*BlockGroesse,out,i*BlockGroesse);
     ms += System.currentTimeMillis();
-    System.out.println("Entschlüsselung beendet. \nBenötigte Zeit: "+
+    System.out.println("Entschlï¿½sselung beendet. \nBenï¿½tigte Zeit: "+
                        (float)ms/1000.0+" sek\nIn Datei speichern ...\u0007");
     P = new Datei();
     P.schreib(out);
-    System.out.print("\nEntschlüsselte Datei ausgeben? (J/N):");
+    System.out.print("\nEntschlï¿½sselte Datei ausgeben? (J/N):");
     if (IO.JaNein()) 
       for (int i=0; i<out.length; i++) {
         if ((i%MaxCharProZeile)==0) System.out.println();

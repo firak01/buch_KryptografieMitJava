@@ -7,7 +7,7 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
   String zKette;
   
   public CaesarDecode26 () {
-    byte[] mtext = d.lies() ;
+    byte[] mtext = d.liesAsByte() ;
     for (int i = 0; i < mtext.length; i++ ) {
       h[mtext[i]-97]++;
       System.out.print((char)mtext[i]);
@@ -28,16 +28,16 @@ class CaesarDecode26 {                      // zaehlt die Buchstaben
       cspitze[i]=k;
       h[k]=0;
     }    
-    System.out.print("\nBezugsbuchstaben für Schluessellänge: ");
+    System.out.print("\nBezugsbuchstaben fï¿½r Schluessellï¿½nge: ");
     bezug=(byte)IO.Zeichen()-97;
-    System.out.println("\nSchluessellänge in bezug auf '"+(char)(bezug+97)+
+    System.out.println("\nSchluessellï¿½nge in bezug auf '"+(char)(bezug+97)+
                        "'(Zeichen-Ordinalzahl-Haeufigkeit)");
     for (i=0; i < 10; i++) {
       System.out.print((char)(cspitze[i]+97)+"("
                        +cspitze[i]+")"+": "+spitze[i]+" ");
       sl = cspitze[i]-bezug;
       spitze[i]=sl;
-      System.out.println("---> Schluessellänge= "+sl);
+      System.out.println("---> Schluessellï¿½nge= "+sl);
     }
     for (k=0; k<10; k++) {
       System.out.print("\nStarte Entschluesselung mit sl="+spitze[k]+":");

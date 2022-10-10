@@ -149,7 +149,7 @@ public class DES { 		// Zusammenstellung der DES-Tools
   }
   public static BigInteger schiebeBigInt(BigInteger BigI, int Bits, int anzahl, String Richtung) {
 //
-// das Schieben erfolgt GRUNDSÄTZLICH mit Rotation!!! Ohne Rotation kann
+// das Schieben erfolgt GRUNDSï¿½TZLICH mit Rotation!!! Ohne Rotation kann
 // direkt die MEthode der Klasse BigInteger verwendet werden!
 //  
     boolean Bit;
@@ -235,7 +235,7 @@ public class DES { 		// Zusammenstellung der DES-Tools
     byte [][][] SBoxen = new byte [8][4][16];   		// die SBoxen 1..8
     int spalte=0, zeile=0;
     Datei SBoxDat = new Datei(DateiName);
-    byte[] datByte = SBoxDat.lies();
+    byte[] datByte = SBoxDat.liesAsByte();
     String datStr = new String(datByte);
     for (int i=0; i<8; i++)         // SBox-Nr
       for (int j=0; j<4; j++)       // SBox-Zeile

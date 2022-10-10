@@ -53,22 +53,22 @@ public final class RIPEMD160 {
   }
 //---------------------------------------------------------------------------
   private byte[] Haschcode(byte[] in) {
-    int pos = in.length; 			// ab wann auffüllen?
-    long bc = pos*8;				// DatenLänge in Bitform
-    int n512 = (pos*8+65)/512+1;		// n 512-er Blöcke
+    int pos = in.length; 			// ab wann auffï¿½llen?
+    long bc = pos*8;				// DatenLï¿½nge in Bitform
+    int n512 = (pos*8+65)/512+1;		// n 512-er Blï¿½cke
     System.out.println("Anzahl Bytes="+pos);
-    System.out.println("Anzahl Blöcke="+n512);
+    System.out.println("Anzahl Blï¿½cke="+n512);
     byte[] tmp = new byte[n512*64];		// min 1 Block
     int[] data = new int[DatenLaenge/4];	// [0..15] 512 Bit
     int block=0;
     if (pos != 0) 				// Daten vorhanden?
       System.arraycopy(in, 0, tmp, 0, pos);	// in nach tmp kopieren
-    for (block=0; block<n512-1; block++) {	// alle kompletten Blöcke
+    for (block=0; block<n512-1; block++) {	// alle kompletten Blï¿½cke
       byte2int(tmp,block*DatenLaenge,data,0,DatenLaenge/4);
       transform(data);
     }
 //    
-// auffüllen mit 1, gefolgt von Nullen + länges als 64 bit
+// auffï¿½llen mit 1, gefolgt von Nullen + lï¿½nges als 64 bit
 // Nullen sind durch new byte[] bereits vordefiniert!!!
 //
     tmp[pos++] = -128; 				// (byte)0x80=128 ("1")
@@ -138,7 +138,7 @@ public final class RIPEMD160 {
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
     System.out.println("Lese Datei ... ");
-    text = d.lies();         		// Text holen
+    text = d.liesAsByte();         		// Text holen
     System.out.println("---- Datei: "+d.dateiname+" ("+text.length+" Bytes) ----");
     RIPEMD160 hash = new RIPEMD160();
     System.out.println(Hex.toString(hash.Haschcode(text)));

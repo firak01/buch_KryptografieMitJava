@@ -29,7 +29,7 @@ public class Caesar {
 		
 		original = new DateiUtil(sFilepath);
 		
-		byte[] geheim = original.lies();
+		byte[] geheim = original.liesAsByte();
 		System.out.println("---- Verschluesseln von: "+DateiUtil.dateiname+"----");
 		for(int i = 0 ; i < geheim.length; i++) {
 			if((geheim[i] > 31) && (geheim[i] < 127)){

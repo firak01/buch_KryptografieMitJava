@@ -9,7 +9,7 @@ class Statistik extends Frame {    	// zaehlt die Buchstaben
     super(titel);
     setBackground(Color.white);
     System.out.println("Lese Datei");
-    mtext = d.lies();
+    mtext = d.liesAsByte();
   }
   public void paint (Graphics g) {
     for (int j=1; j<17; j++) {

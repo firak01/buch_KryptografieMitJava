@@ -26,7 +26,7 @@ class KappaBig4 extends Frame {    	// bestimmt Kappa
     Datei d;
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
-    mtext = d.lies();         		// Text holen
+    mtext = d.liesAsByte();         		// Text holen
     mlaenge = mtext.length;
     KappaBig4 app = new KappaBig4("Kappatest");
     app.setSize(500,200);

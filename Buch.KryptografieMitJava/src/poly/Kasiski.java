@@ -9,10 +9,10 @@ class Kasiski {    			// bestimmt die Wieder-
     Datei d;
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
-    mtext = d.lies();         		// Text holen
+    mtext = d.liesAsByte();         		// Text holen
     String mStr = new String(mtext);
     mlaenge = mtext.length;
-    System.out.print("Länge der zu untersuchenden Teilstringlänge (>2): ");
+    System.out.print("Lï¿½nge der zu untersuchenden Teilstringlï¿½nge (>2): ");
     TeilStringLaenge = IO.ganzeZahl();
     if ((TeilStringLaenge<3)||(TeilStringLaenge>mtext.length))
       TeilStringLaenge=3;

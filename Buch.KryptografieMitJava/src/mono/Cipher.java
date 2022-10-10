@@ -7,7 +7,7 @@ class Caesar { // Caesarverschluesselung ohne Rotation
     if (arg.length > 0) { schluessel = Integer.parseInt(arg[0]); }
     if (arg.length > 1) { Original = new Datei(arg[1]); }
     else { Original = new Datei(); }
-    byte[] geheim = Original.lies() ;
+    byte[] geheim = Original.liesAsByte() ;
     System.out.println(
       "---- Verschluesseln von: "+Datei.dateiname+" ----");
     for (int i = 0; i < geheim.length; i++) {

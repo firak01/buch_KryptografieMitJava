@@ -28,7 +28,7 @@ class KappaBig2 extends Frame {    	// bestimmt Kappa
     Datei d;
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
-    vtext = d.lies();         		// Text holen
+    vtext = d.liesAsByte();         		// Text holen
     vlaenge = vtext.length;
     mtext = new byte[vlaenge/2];	// Text aufteilen
     mlaenge = mtext.length;

@@ -6,15 +6,15 @@ class Kappa {    			// zaehlt die Buchstaben
 
   public Kappa() {
     int[] Buchstaben = new int[26];
-    System.out.print("Schlüsselwortlänge: ");
+    System.out.print("Schlï¿½sselwortlï¿½nge: ");
     int SWL = IO.ganzeZahl();
-    for (int i=0; i<SWL; i++) { 		// für jeden Buchstaben ds SW
+    for (int i=0; i<SWL; i++) { 		// fï¿½r jeden Buchstaben ds SW
       for (int j=0; (j<26); j++) 		// das Alphabet
         for (int k=i; k<mlaenge;k+=SWL) 	// jeden SWL-ten Buchstaben
           if (mtext[k]==(j+65))
             Buchstaben[j]++;
     
-      System.out.println("Verteilung für "+(i+1)+". Stelle");
+      System.out.println("Verteilung fï¿½r "+(i+1)+". Stelle");
       for (int j=65; j<91; j++)
         System.out.print(" "+(char)j+" ");
       System.out.println();
@@ -30,7 +30,7 @@ class Kappa {    			// zaehlt die Buchstaben
     Datei d;
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
-    mtext = d.lies();         		// Text holen
+    mtext = d.liesAsByte();         		// Text holen
     mlaenge = mtext.length;
     Kappa app = new Kappa();
   }

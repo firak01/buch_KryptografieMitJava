@@ -33,9 +33,9 @@ class KappaBig extends Frame {    	// zaehlt die Buchstaben
     Datei d;
     if (arg.length== 0)  d = new Datei();
     else                 d = new Datei(arg[0]);
-//    m="diese zeile soll mit einem anderen gleich langen text auf übereinstimmende";
+//    m="diese zeile soll mit einem anderen gleich langen text auf ï¿½bereinstimmende";
 //    m = "sometimes it is hard enough to realize all these complicated things for th";
-    vtext = d.lies();         		// Text holen
+    vtext = d.liesAsByte();         		// Text holen
     vlaenge = vtext.length;
     mtext = new byte[vlaenge/2];	// Text aufteilen
     mlaenge = mtext.length;
