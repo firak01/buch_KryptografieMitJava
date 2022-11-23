@@ -1,3 +1,5 @@
+package lib;
+
 import java.io.*;
 import java.awt.*;
 
@@ -17,7 +19,7 @@ class Datei {
     byte[] inhalt = this.liesAsByte();
     return new String(inhalt);
   }
-  public byte[] lies() {
+  public byte[] liesAsByte() {
     int[] inhalt = this.liesUnicode();
     byte[]b = new byte[inhalt.length];
     for (int i=0; i<inhalt.length;i++) b[i] = (byte)inhalt[i];
